@@ -1,0 +1,14 @@
+services:
+  api:
+    build: ./api
+    container_name: portfolio-api
+    ports:
+      - "3001:3001"
+    command: npm run dev
+
+  frontend:
+    build: ./frontend
+    container_name: portfolio-frontend
+    ports:
+      - "5173:5173"
+    command: npm run dev
