@@ -1,6 +1,10 @@
 import { useEffect, useState } from "react";
 import api from "../../services/api";
 import styles from "./header.module.css";
+import { socialIcons } from "../../constants/socialIcons";
+import { MenuHamburguer } from "../MenuHamburguer";
+
+
 
 export function Header() {
   const [profile, setProfile] = useState(null);
@@ -26,19 +30,37 @@ export function Header() {
           {profile ? profile.name : "Carregando..."}
         </div>
 
+    
+
+        
+
         <nav className={styles.nav}>
-          <a href="#home">Home</a>
-          <a href="#projects">Projects</a>
-          <a href="#about">About</a>
-          <a href="#contact">Contact</a>
+          <a href="#inicio">Início</a>
+          <a href="#projetos">Projetos</a>
+          <a href="#sobre">Sobre</a>
+          <a href="#contato">Contato</a>
         </nav>
 
-        <nav className={styles.contact}>
-            <a href=""><img src="/src/assets/" alt="GitHub" /></a>
-            <a href=""><img src="/src/assets/" alt="Linkedin" /></a>
-            <a href=""><img src="/src/assets/" alt="Whatsapp" /></a>
+        
 
+       <nav className={styles.contact}>
+          {profile?.contacts?.map(contact => (
+            <a
+              key={contact.id}
+              href={contact.url}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={socialIcons[contact.type]}
+                alt={contact.type}
+              />
+            </a>
+          ))}
         </nav>
+
+
+        <MenuHamburguer/>
 
       </div>
     </header>
