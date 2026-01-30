@@ -33,6 +33,13 @@ export function Header() {
           <a href="#contact">Contact</a>
         </nav>
 
+        <nav className={styles.contact}>
+            <a href=""><img src="/src/assets/" alt="GitHub" /></a>
+            <a href=""><img src="/src/assets/" alt="Linkedin" /></a>
+            <a href=""><img src="/src/assets/" alt="Whatsapp" /></a>
+
+        </nav>
+
       </div>
     </header>
   );
