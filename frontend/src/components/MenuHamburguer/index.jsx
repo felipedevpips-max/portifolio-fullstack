@@ -13,14 +13,14 @@ export const MenuHamburguer = () => {
       <ul className={`${styles.mobileMenu} ${open ? styles.open : ""}`}>
         <li>
           <a href="/" onClick={() => window.location.reload()}>
-            Home
+            Início
           </a>
         </li>
         <li>
           <a href="#sobre">Sobre</a>
         </li>
         <li>
-          <a href="#integrantes">Integrantes</a>
+          <a href="#integrantes">Projetos</a>
         </li>
         <li>
           <a href="#contato">Contato</a>

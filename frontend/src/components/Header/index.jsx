@@ -4,8 +4,6 @@ import styles from "./header.module.css";
 import { socialIcons } from "../../constants/socialIcons";
 import { MenuHamburguer } from "../MenuHamburguer";
 
-
-
 export function Header() {
   const [profile, setProfile] = useState(null);
 
@@ -25,14 +23,9 @@ export function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.container}>
-
         <div className={styles.logo}>
           {profile ? profile.name : "Carregando..."}
         </div>
-
-    
-
-        
 
         <nav className={styles.nav}>
           <a href="#inicio">Início</a>
@@ -41,27 +34,20 @@ export function Header() {
           <a href="#contato">Contato</a>
         </nav>
 
-        
-
-       <nav className={styles.contact}>
-          {profile?.contacts?.map(contact => (
+        <nav className={styles.contact}>
+          {profile?.contacts?.map((contact) => (
             <a
               key={contact.id}
               href={contact.url}
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img
-                src={socialIcons[contact.type]}
-                alt={contact.type}
-              />
+              <img src={socialIcons[contact.type]} alt={contact.type} />
             </a>
           ))}
         </nav>
 
-
-        <MenuHamburguer/>
-
+        <MenuHamburguer />
       </div>
     </header>
   );
