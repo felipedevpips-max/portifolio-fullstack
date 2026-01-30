@@ -8,5 +8,8 @@
 
 :root {
     --background-header:linear-gradient(180deg, #0a0f1d, #020617);
+    --background-logo:linear-gradient(90deg, #0d54ee, #06b6d4);
+    --background-hover-text: #fff;
+    --text-color:#afb7c0;
     
 }

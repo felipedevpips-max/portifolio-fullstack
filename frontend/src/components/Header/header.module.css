@@ -1,10 +1,10 @@
 .header {
   width: 100%;
-  background: linear-gradient(180deg, #0a0f1d, #020617);
+  background:var(--background-header);
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1000;
+  z-index: 900;
   border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
@@ -15,14 +15,14 @@
 
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content:space-between;
 }
 
 .logo {
   font-size: 1.4rem;
   font-weight: 700;
   cursor: pointer;
-  background: linear-gradient(90deg, #6d21f0, #06b6d4);
+  background: var(--background-logo);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -34,7 +34,7 @@
 }
 
 .nav a {
-  color: #e5e7eb;
+  color:var(--text-color);
   text-decoration: none;
   font-size: 0.95rem;
   position: relative;
@@ -42,7 +42,7 @@
 }
 
 .nav a:hover {
-  color: #afb7c0;
+  color:var(--background-hover-text);
 }
 
 .nav a::after {
@@ -58,4 +58,75 @@
 
 .nav a:hover::after {
   width: 100%;
+}
+/*Social media */
+.contact {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.contact a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact img {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) invert();
+  opacity: 0.7;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.contact img:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem 1.25rem;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  /* Esconde o menu no mobile */
+  .nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--background-header);
+
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+
+    padding: 1.5rem 0;
+    display: none;
+  }
+
+  /* Quando ativo */
+  .nav.active {
+    display: flex;
+  }
+
+  .nav a {
+    font-size: 1.1rem;
+  }
+
+  .nav a::after {
+    display: none;
+  }
+
+  /* Ícones um pouco maiores */
+  .contact img {
+    width: 22px;
+    height: 22px;
+  }
 }
