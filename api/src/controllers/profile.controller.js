@@ -1,6 +1,6 @@
 function getProfile(req, res) {
   res.json({
-    name: "Felipe Henrique Costa da Silva",
+    name: "Felipe Costa",
     role: "Desenvolvedor Full Stack",
     bio: "Apaixonado por tecnologia e aprendizado contínuo."
   });
