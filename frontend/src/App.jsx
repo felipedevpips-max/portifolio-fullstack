@@ -1,10 +1,14 @@
+import { Container } from "./components/Container";
+import { Header } from "./components/Header";
+
 function App() {
   return (
-    <div style={{ padding: 20 }}>
-      <h1>Meu Portfólio</h1>
-      <p>Frontend rodando com Docker + Vite 🚀</p>
-    </div>
-  )
+    <>
+      <Container>
+        <Header />
+      </Container>
+    </>
+  );
 }
 
-export default App
+export default App;
