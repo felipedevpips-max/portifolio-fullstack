@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import styles from "./hero.module.css";
 import { useProfileInfo } from "../../hooks/useProfileInfo";
+import avatar from "../../assets/avatar.png";
 
 export default function Hero() {
   const heroRef = useRef(null);
@@ -18,7 +19,7 @@ export default function Hero() {
       color1: 0x000000,
       color2: 0x6135f2,
       size: 0.2,
-      speed: 1.2
+      speed: 1.2,
     });
 
     return () => effect?.destroy();
@@ -27,9 +28,15 @@ export default function Hero() {
   return (
     <section ref={heroRef} className={styles.hero}>
       <div className={styles.content}>
+        <div>
         <h1>{loading ? "Carregando..." : profile.name}</h1>
         <h2>{loading ? "Carregando.." : profile.role}</h2>
         <p>{loading ? "Carregando.." : profile.techs}</p>
+
+        </div>
+        <div className={styles.img}>
+          <img src={avatar} alt="Foto de perfil" className={styles.avatar} />
+        </div>
       </div>
     </section>
   );
