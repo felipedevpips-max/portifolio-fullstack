@@ -4,6 +4,7 @@
 
 *{
     font-family: 'Work Sans', sans-serif;
+    box-sizing: border-box;
 }
 
 :root {
@@ -12,4 +13,11 @@
     --background-hover-text: #fff;
     --text-color:#afb7c0;
     
+}
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
