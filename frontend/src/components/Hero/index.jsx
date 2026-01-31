@@ -28,10 +28,10 @@ export default function Hero() {
   return (
     <section ref={heroRef} className={styles.hero}>
       <div className={styles.content}>
-        <div>
+        <div className={styles.techs}>
         <h1>{loading ? "Carregando..." : profile.name}</h1>
         <h2>{loading ? "Carregando.." : profile.role}</h2>
-        <p>{loading ? "Carregando.." : profile.techs}</p>
+        <p>{loading ? "Carregando.." : profile.techs.join(" • ")}</p>
 
         </div>
         <div className={styles.img}>
