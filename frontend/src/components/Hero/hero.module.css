@@ -29,9 +29,16 @@
 .content h1 {
   font-size: clamp(2.5rem, 6vw, 4rem);
   margin-bottom: 0.5rem;
+  background: var(--background-logo);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .content p {
   font-size: clamp(1.2rem, 3vw, 1.8rem);
   opacity: 0.85;
+  display: flex;
+  justify-content: space-between;
+
 }

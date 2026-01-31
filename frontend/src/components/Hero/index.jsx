@@ -28,7 +28,8 @@ export default function Hero() {
     <section ref={heroRef} className={styles.hero}>
       <div className={styles.content}>
         <h1>{loading ? "Carregando..." : profile.name}</h1>
-        <p>{loading ? "" : profile.role}</p>
+        <h2>{loading ? "Carregando.." : profile.role}</h2>
+        <p>{loading ? "Carregando.." : profile.techs}</p>
       </div>
     </section>
   );
