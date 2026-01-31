@@ -39,7 +39,7 @@ export default function Hero() {
 
           <div className={styles.actions}>
             <ButtonProjects>Ver Projetos</ButtonProjects>
-            <Button>Baixar CV</Button>
+            <Button>Entrar em Contato</Button>
           </div>
         </div>
 
