@@ -15,7 +15,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.65);
+  background: rgba(0, 0, 0, 0.80);
   z-index: 1;
 }
 
@@ -55,6 +55,18 @@
   
 }
 
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
 .img {
   flex-shrink: 0;
   
@@ -70,7 +82,7 @@
   object-fit: cover;
   object-position: center top;
 
-  border: 3px solid #6135f2;
+  border: 3px solid var(--border-color);
   box-shadow: 0 0 30px rgba(97, 53, 242, 0.4);
 }
 
@@ -89,4 +101,9 @@
     
     
   }
+  .content p {
+    display: flex;
+    justify-content: center;
+  }
+  
 }
