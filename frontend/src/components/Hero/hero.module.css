@@ -27,6 +27,7 @@
   z-index: 2;
   display: flex;
   justify-content: space-between;
+  
 
   padding: 2rem;
   color: var(--background-hover-text);
@@ -51,17 +52,35 @@
 
 .img {
   flex-shrink: 0;
-  width: 260px;
-  height: 260px;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .avatar {
-  width: 220px;
-  height: 220px;
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
   object-fit: cover;
+  object-position: center top;
 
   border: 3px solid #6135f2;
   box-shadow: 0 0 30px rgba(97, 53, 242, 0.4);
-  
+}
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+  }
 }
