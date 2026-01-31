@@ -2,6 +2,8 @@ import { useEffect, useRef } from "react";
 import styles from "./hero.module.css";
 import { useProfileInfo } from "../../hooks/useProfileInfo";
 import avatar from "../../assets/avatar.png";
+import { Button } from "../Button";
+import { ButtonProjects } from "../ButtonProjects";
 
 export default function Hero() {
   const heroRef = useRef(null);
@@ -28,12 +30,19 @@ export default function Hero() {
   return (
     <section ref={heroRef} className={styles.hero}>
       <div className={styles.content}>
-        <div className={styles.techs}>
-        <h1>{loading ? "Carregando..." : profile.name}</h1>
-        <h2>{loading ? "Carregando.." : profile.role}</h2>
-        <p>{loading ? "Carregando.." : profile.techs.join(" • ")}</p>
+        <div className={styles.left}>
+          <div className={styles.techs}>
+            <h1>{loading ? "Carregando..." : profile.name}</h1>
+            <h2>{loading ? "Carregando..." : profile.role}</h2>
+            <p>{loading ? "Carregando..." : profile.techs.join(" • ")}</p>
+          </div>
 
+          <div className={styles.actions}>
+            <ButtonProjects>Ver Projetos</ButtonProjects>
+            <Button>Baixar CV</Button>
+          </div>
         </div>
+
         <div className={styles.img}>
           <img src={avatar} alt="Foto de perfil" className={styles.avatar} />
         </div>
