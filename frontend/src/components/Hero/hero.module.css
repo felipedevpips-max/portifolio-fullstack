@@ -1,34 +1,37 @@
+
 .hero {
   width: 100%;
-  height: 75vh;
-  margin-bottom: 5%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
+  height: 100vh;
+  min-height: 100svh;
   position: relative;
   overflow: hidden;
+
+  display: flex;
+  align-items: center;
 }
-.heroImage {
+
+/* overlay leve pra contraste */
+.hero::before {
+  content: "";
   position: absolute;
   inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
+  background: rgba(0,0,0,0.3);
+  z-index: 1;
 }
 
-
-
-@media (max-width: 768px) {
-  .hero {
-    height: 350px;
-    background-size: cover;
-  }
+.content {
+  position: relative;
+  z-index: 2;
+  padding-left: 2rem;
+  color: white;
 }
-@media (max-width: 480px) {
-  .hero {
-    height: 280px;
-    background-size: cover;
-  }
+
+.content h1 {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  margin-bottom: 0.5rem;
+}
+
+.content p {
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  opacity: 0.85;
 }
