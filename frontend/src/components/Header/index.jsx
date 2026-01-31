@@ -1,30 +1,16 @@
-import { useEffect, useState } from "react";
-import api from "../../services/api";
 import styles from "./header.module.css";
 import { socialIcons } from "../../constants/socialIcons";
 import { MenuHamburguer } from "../MenuHamburguer";
+import { useProfileInfo } from "../../hooks/useProfileInfo";
 
 export function Header() {
-  const [profile, setProfile] = useState(null);
-
-  useEffect(() => {
-    async function loadProfile() {
-      try {
-        const response = await api.get("/profile");
-        setProfile(response.data);
-      } catch (error) {
-        console.error("Erro ao carregar perfil:", error);
-      }
-    }
-
-    loadProfile();
-  }, []);
+  const { profile, loading } = useProfileInfo();
 
   return (
     <header className={styles.header}>
       <div className={styles.container}>
         <div className={styles.logo}>
-          {profile ? profile.name : "Carregando..."}
+          {loading ? "Carregando..." : profile?.name}
         </div>
 
         <nav className={styles.nav}>

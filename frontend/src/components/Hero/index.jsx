@@ -1,24 +1,10 @@
 import { useEffect, useRef } from "react";
 import styles from "./hero.module.css";
-import { useState } from "react";
-import api from "../../services/api";
+import { useProfileInfo } from "../../hooks/useProfileInfo";
 
 export default function Hero() {
   const heroRef = useRef(null);
-  const [profile, setProfile] = useState(null);
-
-  useEffect(() => {
-    async function loadProfile() {
-      try {
-        const response = await api.get("/profile");
-        setProfile(response.data);
-      } catch (error) {
-        console.error("Erro ao carregar perfil:", error);
-      }
-    }
-
-    loadProfile();
-  }, []);
+  const { profile, loading } = useProfileInfo();
 
   useEffect(() => {
     const effect = window.VANTA.CELLS({
@@ -41,8 +27,8 @@ export default function Hero() {
   return (
     <section ref={heroRef} className={styles.hero}>
       <div className={styles.content}>
-        <h1>{profile ? profile.name : "Carregando..."}</h1>
-        <p>{profile ? profile.role : ""}</p>
+        <h1>{loading ? "Carregando..." : profile.name}</h1>
+        <p>{loading ? "" : profile.role}</p>
       </div>
     </section>
   );
