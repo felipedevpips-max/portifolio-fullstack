@@ -8,13 +8,10 @@ function App() {
     <>
       <Header />
       <Hero />
-      <section>
-          <About></About>
-        <Container>
-        </Container>
-      </section>
+      <About></About>
+      <Hero />
     </>
   );
-}
+} 
 
 export default App;
