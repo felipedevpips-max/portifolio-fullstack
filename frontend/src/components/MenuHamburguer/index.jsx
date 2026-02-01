@@ -1,5 +1,5 @@
 import { useState } from "react";
-import styles from "./menuhamburguer.module.css"
+import styles from "./menuhamburguer.module.css";
 
 export const MenuHamburguer = () => {
   const [open, setOpen] = useState(false);
@@ -10,6 +10,11 @@ export const MenuHamburguer = () => {
         <span className={open ? styles.active : ""}></span>
         <span className={open ? styles.active : ""}></span>
       </div>
+
+      {open && (
+        <div className={styles.overlay} onClick={() => setOpen(false)} />
+      )}
+
       <ul className={`${styles.mobileMenu} ${open ? styles.open : ""}`}>
         <li>
           <a href="/" onClick={() => window.location.reload()}>
