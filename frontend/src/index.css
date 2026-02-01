@@ -10,6 +10,7 @@
 :root {
     --background-header:linear-gradient(180deg, #0a0f1d, #020617);
     --background-logo:linear-gradient(90deg, #0d54ee, #06b6d4);
+    --background-logo-hover:linear-gradient(90deg, #5c0dee, #064ed4);
     --background-hover-text: #fff;
     --text-color:#afb7c0;
     --border-color:#6135f2;
