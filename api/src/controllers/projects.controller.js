@@ -3,12 +3,16 @@ function getProjects(req, res) {
     {
       id: 1,
       title: "Portfólio Fullstack",
-      techs: ["React", "Node", "Docker"]
+      description: "Site pessoal com backend em Node e frontend em React.",
+      techs: ["React", "Node", "Docker"],
+      github: "https://github.com/seuuser/portfolio"
     },
     {
       id: 2,
       title: "API de Estudos",
-      techs: ["Node", "Express"]
+      description: "API para gerenciar estudos e tarefas.",
+      techs: ["Node", "Express"],
+      github: "https://github.com/seuuser/api-estudos"
     }
   ]);
 }
