@@ -48,7 +48,8 @@
   background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: start;
-    flex: 1;
+  flex: 1;
+  opacity: 0.85;
 }
 
 .card ul {
@@ -58,11 +59,9 @@
   padding: 0;
   margin: 0;
   list-style: none;
-  
 }
 
 .card ul li {
-    
   background: var(--background-li);
   color: var(--text-color);
   font-size: 0.75rem;
