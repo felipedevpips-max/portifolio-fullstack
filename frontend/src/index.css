@@ -5,14 +5,21 @@
 *{
     font-family: 'Work Sans', sans-serif;
     box-sizing: border-box;
+    
+    
 }
 
 :root {
+    --background-page:#05010a;
     --background-header:linear-gradient(180deg, #0a0f1d, #020617);
     --background-logo:linear-gradient(90deg, #0d54ee, #06b6d4);
-    --background-hover-text: #fff;
+    --background-logo-hover:linear-gradient(90deg, #5c0dee, #064ed4);
+    --background-hover-text: #e5e7eb;
     --text-color:#afb7c0;
     --border-color:#6135f2;
+    --background-card:linear-gradient(180deg, #0b1220 0%, #050a16 100%);
+    --border-card:rgba(99, 102, 241, 0.3);
+    --background-li:rgba(99, 102, 241, 0.15)
 }
 
 
@@ -20,4 +27,10 @@ html, body {
   margin: 0;
   padding: 0;
   width: 100%;
+  box-sizing: border-box;
+  width: 100%;
+  background: var(--background-page);
+
+
+  
 }

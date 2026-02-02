@@ -1,22 +1,24 @@
-import { useEffect, useState } from 'react';
-import api from '../services/api';
+import styles from "./projects.module.css";
+import { ProjectCard } from "../ProjectCard";
+import { useProjectsInfo } from "../../hooks/useProjectsInfo";
 
-function Projects() {
-  const [projects, setProjects] = useState([]);
-
-  useEffect(() => {
-    api.get('/api/projects')
-      .then(res => setProjects(res.data))
-      .catch(err => console.error(err));
-  }, []);
+export function Projects() {
+  const { projects, loading } = useProjectsInfo("/projects");
 
   return (
-    <div>
-      {projects.map(p => (
-        <div key={p.id}>{p.name}</div>
-      ))}
-    </div>
+    <section className={styles.section}>
+      <div className={styles.container}>
+        <h2>Meus Projetos</h2>
+
+        <div className={styles.projects}>
+          {loading && <p>Carregando...</p>}
+
+          {!loading &&
+            projects.map((project) => (
+              <ProjectCard key={project.id} project={project} />
+            ))}
+        </div>
+      </div>
+    </section>
   );
 }
-
-export default Projects;

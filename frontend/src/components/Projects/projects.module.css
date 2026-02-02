@@ -1,0 +1,46 @@
+.section{
+    margin: 100px 0;
+}
+
+.container {
+ max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.container h2 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    text-align: center;
+    color: var(--background-hover-text);
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  animation: fadeUp 1s ease forwards;
+}
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .projects {
+    gap:16px;
+    grid-template-columns: 1fr;
+  }
+}

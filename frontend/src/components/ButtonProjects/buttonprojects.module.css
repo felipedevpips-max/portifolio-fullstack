@@ -12,5 +12,6 @@
 }
 
 .btn:hover {
-  background: rgba(97, 53, 242, 0.15);
+  background: var(--background-logo-hover);
+  transition: 0.6s ease;
 }
