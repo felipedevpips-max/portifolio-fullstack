@@ -34,6 +34,14 @@ export function ProjectCard({ project }) {
         >
           Ver no GitHub
         </a>
+
+        <a
+          href={project.deploy}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Ver Deploy
+        </a>
       </div>
     </div>
   );
