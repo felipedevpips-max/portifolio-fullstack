@@ -5,23 +5,36 @@ export function ProjectCard({ project }) {
 
   return (
     <div className={styles.card}>
-      <h3>{project.title}</h3>
-
+      {/* IMAGEM */}
       {project.image && (
-        <img src={`/projectImages/${project.image}`} alt={project.title} />
+        <div className={styles.imageWrapper}>
+          <img
+            src={`/projectImages/${project.image}`}
+            alt={project.title}
+          />
+        </div>
       )}
 
-      <p>{project.description}</p>
+      {/* CONTEÚDO */}
+      <div className={styles.content}>
+        <h3>{project.title}</h3>
 
-      <ul>
-        {project.techs.map((tech) => (
-          <li key={tech}>{tech}</li>
-        ))}
-      </ul>
+        <p>{project.description}</p>
 
-      <a href={project.github} target="_blank" rel="noopener noreferrer">
-        Ver no GitHub
-      </a>
+        <ul>
+          {project.techs.map((tech) => (
+            <li key={tech}>{tech}</li>
+          ))}
+        </ul>
+
+        <a
+          href={project.github}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Ver no GitHub
+        </a>
+      </div>
     </div>
   );
 }
