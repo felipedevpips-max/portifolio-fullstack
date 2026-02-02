@@ -48,6 +48,7 @@
   background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: start;
+    flex: 1;
 }
 
 .card ul {
@@ -57,9 +58,11 @@
   padding: 0;
   margin: 0;
   list-style: none;
+  
 }
 
 .card ul li {
+    
   background: var(--background-li);
   color: var(--text-color);
   font-size: 0.75rem;
@@ -69,9 +72,14 @@
   border: 1px solid var(--border-color);
 }
 
-
-.card a {
+.links {
   margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.link1 {
   align-self: flex-start;
   color: var(--background-hover-text);
   background: var(--background-logo);
@@ -81,25 +89,42 @@
   padding: 10px 16px;
   border-radius: 10px;
   cursor: pointer;
+}
+
+.link1:hover {
+  background: var(--background-logo-hover);
+  transition: 0.6s ease;
   box-shadow: 0 0 30px rgba(97, 53, 242, 0.4);
 }
 
-.card a:hover {
-  background: var(--background-logo-hover);
+.link2 {
+  align-self: flex-start;
+  color: var(--background-hover-text);
+  background: transparent;
+  border: 1px solid var(--border-color);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 10px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.link2:hover {
+  background: rgba(97, 53, 242, 0.15);
   transition: 0.6s ease;
+  box-shadow: 0 0 30px rgba(97, 53, 242, 0.4);
 }
 .content {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  flex: 1;
 }
-
-
 
 @media (max-width: 768px) {
   .card {
     margin: 10px;
-    
   }
 
   .imageWrapper img {
