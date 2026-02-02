@@ -8,14 +8,14 @@ export function Projects() {
   return (
     <section className={styles.section}>
       <div className={styles.container}>
+        <h2>Meus Projetos</h2>
+
         <div className={styles.projects}>
-            <h2>Meus Projetos</h2>
           {loading && <p>Carregando...</p>}
 
           {!loading &&
             projects.map((project) => (
               <ProjectCard key={project.id} project={project} />
-
             ))}
         </div>
       </div>
