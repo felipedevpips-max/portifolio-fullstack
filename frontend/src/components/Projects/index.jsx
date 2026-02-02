@@ -1,42 +1,21 @@
 import styles from "./projects.module.css";
-
+import { ProjectCard } from "../ProjectCard";
 import { useProjectsInfo } from "../../hooks/useProjectsInfo";
 
-export function About() {
-  const { projects, loading } = useProjectsInfo();
+export function Projects() {
+  const { projects, loading } = useProjectsInfo("/projects");
 
   return (
     <section className={styles.section}>
       <div className={styles.container}>
-        <h2>Projetos</h2>
-        <p></p>
         <div className={styles.projects}>
+            <h2>Meus Projetos</h2>
           {loading && <p>Carregando...</p>}
 
           {!loading &&
             projects.map((project) => (
-              <div key={project.id} className={styles.projectCard}>
-                <h3>{project.title}</h3>
+              <ProjectCard key={project.id} project={project} />
 
-                <img src={projectImages} alt={project.title} />
-
-                <p>{project.description}</p>
-
-                <ul>
-                  {project.techs.map((tech, i) => (
-                    <li key={i}>{tech}</li>
-                  ))}
-                </ul>
-
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={styles.githubButton}
-                >
-                  Ver no GitHub
-                </a>
-              </div>
             ))}
         </div>
       </div>

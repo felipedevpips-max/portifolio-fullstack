@@ -1,7 +1,8 @@
 import { About } from "./components/About";
-import { Container } from "./components/Container";
+
 import { Header } from "./components/Header";
 import Hero from "./components/Hero";
+import { Projects } from "./components/Projects";
 
 function App() {
   return (
@@ -9,7 +10,7 @@ function App() {
       <Header />
       <Hero />
       <About></About>
-      <Hero />
+      <Projects />
     </>
   );
 } 
