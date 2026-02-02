@@ -7,7 +7,9 @@
   gap: 16px;
 
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .card:hover {
@@ -60,22 +62,19 @@
 .card a {
   margin-top: auto;
   align-self: flex-start;
-color: var(--background-hover-text);
-background: var(--background-logo);
-  color:var( --background-hover-text);
+  color: var(--background-hover-text);
+  background: var(--background-logo);
   text-decoration: none;
   font-size: 0.85rem;
   font-weight: 600;
   padding: 10px 16px;
   border-radius: 10px;
-  transition: opacity 0.2s ease, transform 0.2s ease;
-
-  
+  cursor: pointer;
 }
 
 .card a:hover {
-  opacity: 0.9;
-  transform: translateY(-1px);
+  background: var(--background-logo-hover);
+  transition: 0.6s ease;
 }
 
 /* responsivo */
