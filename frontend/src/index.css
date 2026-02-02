@@ -17,7 +17,8 @@
     --background-hover-text: #e5e7eb;
     --text-color:#afb7c0;
     --border-color:#6135f2;
-    --background-card:#0b1020
+    --background-card:linear-gradient(180deg, #0b1220 0%, #050a16 100%);
+    --border-card:rgba(99, 102, 241, 0.3)
 }
 
 

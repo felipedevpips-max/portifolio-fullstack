@@ -1,19 +1,16 @@
 .card {
   border-radius: 16px;
-  overflow: hidden; /* ESSENCIAL para integrar a imagem */
+  overflow: hidden; /* para integrar a imagem */
   padding: 24px;
   margin: 10px;
   display: flex;
   flex-direction: column;
   gap: 10px;
-
-  background: linear-gradient(180deg, #0b1220 0%, #050a16 100%);
+  background: var(--background-card);
   border: 1px solid rgba(99, 102, 241, 0.25);
-
   box-shadow:
     0 0 0 1px rgba(99, 102, 241, 0.15),
     0 20px 40px rgba(0, 0, 0, 0.6);
-
   transition: all 0.3s ease;
 }
 
@@ -21,8 +18,6 @@
   transform: translateY(-6px);
   box-shadow: 0 0 30px rgba(97, 53, 242, 0.4);
 }
-
-/* ===== IMAGEM INTEGRADA ===== */
 
 .imageWrapper {
   width: calc(100% + 48px);
@@ -34,11 +29,7 @@
   height: 200px;
   object-fit: cover;
   display: block;
-
-  border-bottom: 1px solid rgba(99, 102, 241, 0.3);
 }
-
-/* ===== TÍTULO ===== */
 
 .card h3 {
   font-size: 1.3rem;
@@ -47,12 +38,13 @@
   text-align: center;
 }
 
-/* ===== DESCRIÇÃO ===== */
-
 .card p {
   font-size: 0.95rem;
   line-height: 1.5;
-  color: var(--background-hover-text);
+  background: var(--background-logo);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   text-align: start;
 }
 
@@ -111,7 +103,7 @@
 @media (max-width: 768px) {
   .card {
     margin: 10px;
-    padding: 28px;
+    
   }
 
   .imageWrapper img {
