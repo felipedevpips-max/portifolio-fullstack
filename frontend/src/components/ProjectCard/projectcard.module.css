@@ -9,7 +9,7 @@
   background: var(--background-card);
   border: 1px solid rgba(99, 102, 241, 0.25);
   box-shadow:
-    0 0 0 1px rgba(99, 102, 241, 0.15),
+    0 0 0 1px var(--background-li),
     0 20px 40px rgba(0, 0, 0, 0.6);
   transition: all 0.3s ease;
 }
@@ -48,8 +48,6 @@
   text-align: start;
 }
 
-/* ===== TECNOLOGIAS ===== */
-
 .card ul {
   display: flex;
   flex-wrap: wrap;
@@ -60,30 +58,26 @@
 }
 
 .card ul li {
-  background: rgba(99, 102, 241, 0.15);
+  background: var(--background-li);
   color: var(--text-color);
   font-size: 0.75rem;
   padding: 6px 10px;
-  border-radius: 999px;
-  font-weight: 500;
+  border-radius: 16px;
+  font-weight: 600;
   border: 1px solid var(--border-color);
 }
 
-/* ===== BOTÃO ===== */
 
 .card a {
   margin-top: auto;
   align-self: flex-start;
-
   color: var(--background-hover-text);
   background: var(--background-logo);
   text-decoration: none;
-
   font-size: 0.85rem;
   font-weight: 600;
   padding: 10px 16px;
   border-radius: 10px;
-
   cursor: pointer;
   box-shadow: 0 0 30px rgba(97, 53, 242, 0.4);
 }
@@ -98,7 +92,7 @@
   gap: 10px;
 }
 
-/* ===== RESPONSIVO ===== */
+
 
 @media (max-width: 768px) {
   .card {

@@ -5,7 +5,7 @@ export function ProjectCard({ project }) {
 
   return (
     <div className={styles.card}>
-      {/* IMAGEM */}
+   
       {project.image && (
         <div className={styles.imageWrapper}>
           <img
@@ -15,7 +15,7 @@ export function ProjectCard({ project }) {
         </div>
       )}
 
-      {/* CONTEÚDO */}
+    
       <div className={styles.content}>
         <h3>{project.title}</h3>
 
