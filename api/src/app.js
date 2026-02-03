@@ -9,6 +9,11 @@ const profileRoutes = require("./routes/profile.routes");
 
 const contactRoutes = require("./routes/contact.routes");
 
+const techsRoutes = require("./routes/techs.routes");
+
+
+
+
 
 // Middlewares
 app.use(cors());
@@ -20,6 +25,10 @@ app.use("/api/projects", projectsRoutes);
 app.use("/api/profile", profileRoutes);
 
 app.use("/api/contact", contactRoutes);
+
+app.use("/api/techs", techsRoutes);
+
+
 
 
 // Rota de teste

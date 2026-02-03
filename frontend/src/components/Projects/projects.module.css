@@ -1,17 +1,19 @@
-.section{
-    margin: 100px 0;
+.section {
+  background: var(--background-card);
+  padding: 6rem 0;
+  animation: fadeUp 1s ease forwards;
 }
 
 .container {
- max-width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 24px;
 }
 
 .container h2 {
-    font-size: clamp(1.5rem, 4vw, 2.5rem);
-    text-align: center;
-    color: var(--background-hover-text);
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  text-align: center;
+  color: var(--background-hover-text);
 }
 
 .projects {
@@ -31,7 +33,6 @@
   }
 }
 
-
 @media (max-width: 1024px) {
   .projects {
     grid-template-columns: repeat(2, 1fr);
@@ -40,7 +41,7 @@
 
 @media (max-width: 640px) {
   .projects {
-    gap:16px;
+    gap: 16px;
     grid-template-columns: 1fr;
   }
 }
