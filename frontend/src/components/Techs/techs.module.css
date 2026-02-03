@@ -1,7 +1,6 @@
-/* SECTION (fundo + espaçamento geral) */
 .section {
   padding: 6rem 0;
-  background: linear-gradient(180deg, #0b0f1a, #0e1324);
+  background: var(--background-card);
   animation: fadeUp 1s ease forwards;
 }
 
@@ -17,7 +16,6 @@
 }
 
 
-/* CONTAINER (centralização e largura máxima) */
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -25,74 +23,63 @@
   text-align: center;
 }
 
-/* TÍTULO PRINCIPAL */
 .title {
-  font-size: 2.5rem;
-  font-weight: 600;
-  color: #7c6cff;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: var(--background-hover-text);
   margin-bottom: 0.75rem;
+  
 }
 
-/* SUBTÍTULO */
 .subtitle {
   display: block;
-  color: #cbd5e1;
-  font-size: 1rem;
+  color: var(--text-color);
+  font-size: clamp(1.1rem, 2.5vw, 1.3rem);
   margin-bottom: 4rem;
 }
 
-/* GRID DOS CARDS */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 2rem;
 }
 
-/* CARD INDIVIDUAL */
 .card {
-  background: rgba(255, 255, 255, 0.03);
+    
+  background: var(--background-techs);
   border-radius: 14px;
   padding: 2rem 1.5rem;
-
-  /* efeito glass */
   backdrop-filter: blur(10px);
-
-  /* borda sutil */
-  border: 1px solid rgba(255, 255, 255, 0.06);
-
-  /* animação suave */
+  border: 1px solid var(--card-border);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* HOVER DO CARD */
 .card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 12px 35px rgba(124, 108, 255, 0.25);
+  box-shadow: 0 0 30px rgba(97, 53, 242, 0.4);
 }
 
-/* ÍCONE */
 .icon {
   width: 48px;
   height: 48px;
   margin-bottom: 1.25rem;
 }
 
-/* NOME DA TECNOLOGIA */
 .card h3 {
-  font-size: 1.1rem;
-  font-weight: 500;
-  color: #ffffff;
+  font-weight: 600;
+  color: var(--background-hover-text);
   margin-bottom: 0.5rem;
+  font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+  line-height: 1.8;
 }
 
-/* DESCRIÇÃO */
 .card p {
+    
   font-size: 0.9rem;
-  color: #94a3b8;
+  color: var(--text-color);
   line-height: 1.4;
 }
 
-/* RESPONSIVIDADE EXTRA */
 @media (max-width: 480px) {
   .title {
     font-size: 2rem;
