@@ -1,4 +1,15 @@
-**/node_modules
-.env
-/frontend/.gitignore
-/api/.gitignore
+# Global
+**/node_modules/
+**/.env
+**/.env.*
+
+# Builds
+**/dist/
+**/build/
+
+# Logs
+**/*.log
+
+# OS
+.DS_Store
+Thumbs.db

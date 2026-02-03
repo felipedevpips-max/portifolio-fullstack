@@ -9,24 +9,17 @@ export function Contact() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
-  function handleSubmit(e) {
-    e.preventDefault();
+  async function handleSubmit(e) {
+  e.preventDefault();
 
-    sendContact({
-      name,
-      email,
-      message,
-    })
-      .then(() => {
-        //  Reseta o formulário após sucesso
-        setName("");
-        setEmail("");
-        setMessage("");
-      })
-      .catch(() => {
-        // erro já tratado no hook
-      });
+  await sendContact({ name, email, message });
+
+  if (!error) {
+    setName("");
+    setEmail("");
+    setMessage("");
   }
+}
 
   return (
     <section className={styles.section} id="contact">
