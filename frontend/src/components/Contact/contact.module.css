@@ -1,66 +1,68 @@
 .section {
   padding: 6rem 0;
-  background: linear-gradient(180deg, #0b0f1a, #0e1324);
+  background: var(--background-card);
+  
 }
+
 
 .container {
   max-width: 600px;
   margin: 0 auto;
   padding: 0 1.5rem;
   text-align: center;
+  
 }
 
-/* TÍTULO */
 .title {
-  font-size: 2.5rem;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
   font-weight: 700;
-  color: #ffffff;
-  letter-spacing: 1px;
+  color: var(--background-hover-text);
+  
 }
 
 .line {
   width: 60px;
   height: 3px;
-  background: #7c6cff;
   margin: 0.75rem auto 1.75rem;
   border-radius: 2px;
 }
 
-/* TEXTO */
 .description {
-  color: #cbd5e1;
+  color: var(--text-color);
   margin-bottom: 3rem;
   line-height: 1.6;
   font-size: 1rem;
 }
 
-/* FORM CARD */
 .form {
-  background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(15px);
-  border: 1px solid rgba(124, 108, 255, 0.2);
   border-radius: 20px;
   padding: 3rem 2rem;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+  background: var(--background-card);
+  border: 1px solid var(--card-border);
+  box-shadow:
+    0 0 0 1px var(--background-li),
+    0 20px 40px rgba(0, 0, 0, 0.6);
   transition: all 0.3s ease;
+  
+  
 }
 
 .form:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 40px rgba(124, 108, 255, 0.4);
+  transform: translateY(-6px);
+  box-shadow: 0 0 30px rgba(97, 53, 242, 0.4);
 }
 
-/* INPUTS */
 .form input,
 .form textarea {
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(124, 108, 255, 0.3);
+  background: var(--background-card);
+  border: 1px solid var(--card-border);
   border-radius: 14px;
   padding: 0.95rem 1rem;
-  color: #ffffff;
+  color: var(--background-hover-text);
   font-size: 1rem;
   transition: all 0.3s ease;
 }
@@ -70,17 +72,11 @@
   resize: none;
 }
 
-.form input::placeholder,
-.form textarea::placeholder {
-  color: #94a3b8;
-  font-style: italic;
-}
 
-/* FOCUS */
 .form input:focus,
 .form textarea:focus {
   outline: none;
-  border-color: #7c6cff;
+  border-color:var(--border-color);
   box-shadow: 0 0 15px rgba(124, 108, 255, 0.3);
 }
 
@@ -89,9 +85,9 @@
   margin-top: 1rem;
   padding: 0.95rem;
   border-radius: 16px;
-  border: 2px solid #7c6cff;
-  background: linear-gradient(135deg, rgba(124,108,255,0.1), rgba(124,108,255,0.3));
-  color: #7c6cff;
+  border:none;
+  color: var(--background-hover-text);
+  background: var(--background-logo);
   font-weight: 600;
   cursor: pointer;
   font-size: 1rem;
@@ -99,8 +95,8 @@
 }
 
 .form button:hover {
-  background: #7c6cff;
-  color: #0b0f1a;
+  background: var(--background-logo-hover);
+  color: var(--background-page);
   box-shadow: 0 0 30px rgba(124, 108, 255, 0.5);
   transform: translateY(-2px);
 }
