@@ -1,7 +1,5 @@
 {
-  "scripts": {
-    "start": "cd api && npm install && npm start"
-  },
+  
   "dependencies": {
     "dotenv": "^17.2.3",
     "nodemailer": "^7.0.13",
