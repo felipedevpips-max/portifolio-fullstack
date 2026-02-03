@@ -13,7 +13,9 @@ export function About() {
           {loading
             ? "Carregando..."
             : profile?.bio
-                .split(". ")
+                .split(".")
+                .map((p) => p.trim())
+                .filter((p) => p.length > 0)
                 .map((paragraph, index) => <p key={index}>{paragraph}.</p>)}
         </div>
       </div>
