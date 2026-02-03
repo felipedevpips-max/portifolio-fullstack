@@ -1,2 +1,15 @@
-**/node_modules
-.env
+# Global
+**/node_modules/
+**/.env
+**/.env.*
+
+# Builds
+**/dist/
+**/build/
+
+# Logs
+**/*.log
+
+# OS
+.DS_Store
+Thumbs.db

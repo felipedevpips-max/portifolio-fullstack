@@ -29,8 +29,10 @@
   background: var(--background-card);
   box-shadow: inset 0 40px 60px rgba(0, 0, 0, 0.05);
   color: var(--background-hover-text);
+}
 
-  animation: fadeUp 1s ease forwards;
+.section.visible {
+  animation: fadeUp 0.8s ease forwards;
 }
 
 @keyframes fadeUp {
