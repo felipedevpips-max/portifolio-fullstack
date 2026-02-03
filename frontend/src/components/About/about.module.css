@@ -32,7 +32,7 @@
 }
 
 .section.visible {
-  animation: fadeUp 0.8s ease forwards;
+  animation: fadeUp 0.6s ease forwards;
 }
 
 @keyframes fadeUp {
