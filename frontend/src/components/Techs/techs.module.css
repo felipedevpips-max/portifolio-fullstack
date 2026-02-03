@@ -1,7 +1,11 @@
 .section {
   padding: 6rem 0;
   background: var(--background-card);
-  animation: fadeUp 1s ease forwards;
+  
+}
+
+.section.visible {
+  animation: fadeUp 0.8s ease forwards;
 }
 
 @keyframes fadeUp {
@@ -46,7 +50,7 @@
 
 .card {
     
-  background: var(--background-techs);
+  background: var(--background-card);
   border-radius: 14px;
   padding: 2rem 1.5rem;
   backdrop-filter: blur(10px);
