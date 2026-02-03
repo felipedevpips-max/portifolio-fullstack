@@ -16,7 +16,7 @@ function getProjects(req, res) {
       description: "Website institucional desenvolvido para a banda The Mythz, com foco em presença digital, divulgação e marketing, ao mesmo tempo em que serviu como um projeto prático para evolução das minhas habilidades em desenvolvimento front-end.",
       techs: ["React", "Vite","JavaScript","CSS Modules"],
       github: "https://github.com/felipedevpips-max/the-mythz",
-      deploy:"https://the-mythz.vercel.app/",
+      deploy:"https://portifolio-fullstack-ivory.vercel.app/",
       image: "themythz.png",
     },
     {
