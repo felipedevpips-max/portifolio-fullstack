@@ -1,0 +1,97 @@
+.section {
+  padding: 6rem 0;
+  background: linear-gradient(180deg, #0b0f1a, #0e1324);
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+/* TÍTULO */
+.title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.line {
+  width: 60px;
+  height: 3px;
+  background: #7c6cff;
+  margin: 0.75rem auto 1.75rem;
+}
+
+/* TEXTO */
+.description {
+  color: #cbd5e1;
+  margin-bottom: 3rem;
+  line-height: 1.6;
+}
+
+/* FORM CARD */
+.form {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 18px;
+
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* INPUTS */
+.form input,
+.form textarea {
+  background: transparent;
+  border: 1px solid rgba(124, 108, 255, 0.35);
+  border-radius: 12px;
+
+  padding: 0.9rem 1rem;
+  color: #ffffff;
+  font-size: 0.95rem;
+}
+
+.form textarea {
+  min-height: 120px;
+  resize: none;
+}
+
+.form input::placeholder,
+.form textarea::placeholder {
+  color: #94a3b8;
+}
+
+/* FOCUS */
+.form input:focus,
+.form textarea:focus {
+  outline: none;
+  border-color: #7c6cff;
+}
+
+/* BOTÃO */
+.form button {
+  margin-top: 1rem;
+  padding: 0.9rem;
+
+  border-radius: 14px;
+  border: 2px solid #7c6cff;
+  background: transparent;
+
+  color: #7c6cff;
+  font-weight: 600;
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.form button:hover {
+  background: #7c6cff;
+  color: #0b0f1a;
+  box-shadow: 0 0 25px rgba(124, 108, 255, 0.35);
+}
