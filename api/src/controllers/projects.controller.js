@@ -41,7 +41,7 @@ function getProjects(req, res) {
       id: 5,
       title: "Pomodoro + Task Manager",
       description: "Aplicação que integra um timer Pomodoro com um gerenciador de tarefas (CRUD). As tarefas são salvas no LocalStorage e são marcadas como concluídas automaticamente ao final de um ciclo de foco. O projeto foi desenvolvido com o objetivo de praticar conceitos essenciais do desenvolvimento front-end moderno.",
-      techs: ["React", "JavaScript"],
+      techs: ["JavaScript"],
       github: "https://github.com/felipedevpips-max/projeto-forkus",
       deploy:"https://projeto-forkus.vercel.app/",
       image: "pomodoro.png",
