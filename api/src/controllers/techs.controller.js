@@ -20,3 +20,4 @@ function getTechs(req, res) {
     },
   ]);
 }
+module.exports = { getTechs };
