@@ -1,0 +1,104 @@
+/* SECTION (fundo + espaçamento geral) */
+.section {
+  padding: 6rem 0;
+  background: linear-gradient(180deg, #0b0f1a, #0e1324);
+  animation: fadeUp 1s ease forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* CONTAINER (centralização e largura máxima) */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+/* TÍTULO PRINCIPAL */
+.title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #7c6cff;
+  margin-bottom: 0.75rem;
+}
+
+/* SUBTÍTULO */
+.subtitle {
+  display: block;
+  color: #cbd5e1;
+  font-size: 1rem;
+  margin-bottom: 4rem;
+}
+
+/* GRID DOS CARDS */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2rem;
+}
+
+/* CARD INDIVIDUAL */
+.card {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 14px;
+  padding: 2rem 1.5rem;
+
+  /* efeito glass */
+  backdrop-filter: blur(10px);
+
+  /* borda sutil */
+  border: 1px solid rgba(255, 255, 255, 0.06);
+
+  /* animação suave */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* HOVER DO CARD */
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 35px rgba(124, 108, 255, 0.25);
+}
+
+/* ÍCONE */
+.icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 1.25rem;
+}
+
+/* NOME DA TECNOLOGIA */
+.card h3 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+/* DESCRIÇÃO */
+.card p {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  line-height: 1.4;
+}
+
+/* RESPONSIVIDADE EXTRA */
+@media (max-width: 480px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .card {
+    padding: 1.5rem 1rem;
+  }
+}
