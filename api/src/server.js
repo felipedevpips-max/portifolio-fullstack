@@ -1,8 +1,9 @@
-require("dotenv").config(); 
+require("dotenv").config();
 
-const app = require("./app");
+const app = require("./app"); // caminho relativo correto
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT;
+if (!PORT) throw new Error("PORT não definida!");
 
 app.listen(PORT, () => {
   console.log(`Servidor rodando na porta ${PORT}`);
