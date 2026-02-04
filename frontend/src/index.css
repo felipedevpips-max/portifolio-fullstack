@@ -27,11 +27,10 @@
 
 
 html, body, #root {
-  margin: 0;
+ margin: 0;
   padding: 0;
-  width: 100%;
   min-height: 100vh;
-  background: var(--background-page);
+  
 }
 
 .app {
@@ -41,4 +40,6 @@ html, body, #root {
 }
 main {
   flex: 1;
+  background: var(--background-page);
+  
 }

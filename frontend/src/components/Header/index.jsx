@@ -15,10 +15,10 @@ export function Header() {
         </div>
 
         <nav className={styles.nav}>
-          <NavLink to="/">Início</NavLink>
-          <NavLink to="/projetos">Projetos</NavLink>
-          <NavLink to="/sobre">Sobre</NavLink>
-          <NavLink to="/contato">Contato</NavLink>
+          <a href="#inicio">Início</a>
+          <a href="#projetos">Projetos</a>
+          <a href="#sobre">Sobre</a>
+          <a href="#contato">Contato</a>
         </nav>
 
         <nav className={styles.contact}>
