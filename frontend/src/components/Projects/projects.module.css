@@ -20,6 +20,8 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 22px;
+  color: var(--background-hover-text);
+  text-align: center;
   
 }
 .section.visible {
