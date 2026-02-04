@@ -2,6 +2,7 @@ import styles from "./header.module.css";
 import { socialIcons } from "../../constants/socialIcons";
 import { MenuHamburguer } from "../MenuHamburguer";
 import { useProfileInfo } from "../../hooks/useProfileInfo";
+import { NavLink } from "react-router-dom";
 
 export function Header() {
   const { profile, loading } = useProfileInfo();
@@ -14,10 +15,10 @@ export function Header() {
         </div>
 
         <nav className={styles.nav}>
-          <a href="#inicio">Início</a>
-          <a href="#projetos">Projetos</a>
-          <a href="#sobre">Sobre</a>
-          <a href="#contato">Contato</a>
+          <NavLink to="/">Início</NavLink>
+          <NavLink to="/projetos">Projetos</NavLink>
+          <NavLink to="/sobre">Sobre</NavLink>
+          <NavLink to="/contato">Contato</NavLink>
         </nav>
 
         <nav className={styles.contact}>
