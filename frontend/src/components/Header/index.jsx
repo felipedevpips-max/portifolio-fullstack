@@ -2,7 +2,6 @@ import styles from "./header.module.css";
 import { socialIcons } from "../../constants/socialIcons";
 import { MenuHamburguer } from "../MenuHamburguer";
 import { useProfileInfo } from "../../hooks/useProfileInfo";
-import { NavLink } from "react-router-dom";
 
 export function Header() {
   const { profile, loading } = useProfileInfo();

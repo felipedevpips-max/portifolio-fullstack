@@ -39,7 +39,21 @@ html, body, #root {
   flex-direction: column;
 }
 main {
-  flex: 1;
   background: var(--background-page);
   
+}
+
+section {
+  scroll-margin-top: 90px; /* altura do header */
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
 }

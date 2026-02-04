@@ -3,6 +3,9 @@ import styles from "./menuhamburguer.module.css";
 
 export const MenuHamburguer = () => {
   const [open, setOpen] = useState(false);
+
+  const handleClose = () => setOpen(false);
+
   return (
     <>
       <div className={styles.hamburguer} onClick={() => setOpen(!open)}>
@@ -12,23 +15,29 @@ export const MenuHamburguer = () => {
       </div>
 
       {open && (
-        <div className={styles.overlay} onClick={() => setOpen(false)} />
+        <div className={styles.overlay} onClick={handleClose} />
       )}
 
       <ul className={`${styles.mobileMenu} ${open ? styles.open : ""}`}>
         <li>
-          <a href="/" onClick={() => window.location.reload()}>
+          <a href="/#inicio" onClick={handleClose}>
             Início
           </a>
         </li>
         <li>
-          <a href="#sobre">Sobre</a>
+          <a href="/#sobre" onClick={handleClose}>
+            Sobre
+          </a>
         </li>
         <li>
-          <a href="#integrantes">Projetos</a>
+          <a href="/#projetos" onClick={handleClose}>
+            Projetos
+          </a>
         </li>
         <li>
-          <a href="#contato">Contato</a>
+          <a href="/#contato" onClick={handleClose}>
+            Contato
+          </a>
         </li>
       </ul>
     </>
