@@ -1,7 +1,7 @@
 .footer {
   background:var(--background-header);
   border-top: 1px solid var(--card-border);
-  padding: 3.5rem 0 2rem;
+  padding: 3rem 0 2rem;
 }
 
 .container {

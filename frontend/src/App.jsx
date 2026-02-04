@@ -1,25 +1,22 @@
-import { About } from "./components/About";
-import { Contact } from "./components/Contact";
-import { Footer } from "./components/Footer";
-
+import { BrowserRouter } from "react-router-dom";
 import { Header } from "./components/Header";
-import Hero from "./components/Hero";
-import { Projects } from "./components/Projects";
-import { Techs } from "./components/Techs";
+import { Footer } from "./components/Footer";
+import Home from "./components/Home";
 
 function App() {
   return (
-    <>
-      <Header />
-      <Hero />
-      <About></About>
-      <Techs/>
-      <Projects />
-      <Contact/>
-      <Footer/>
+    <BrowserRouter>
+      <div className="app">
+        <Header />
 
-    </>
+        <main>
+          <Home />
+        </main>
+
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
-} 
+}
 
 export default App;

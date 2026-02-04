@@ -38,8 +38,8 @@ export default function Hero() {
           </div>
 
           <div className={styles.actions}>
-            <ButtonProjects>Ver Projetos</ButtonProjects>
-            <Button>Entrar em Contato</Button>
+            <ButtonProjects href="/#projetos">Ver Projetos</ButtonProjects>
+            <Button href="/#contato">Entrar em Contato</Button>
           </div>
         </div>
 
