@@ -57,11 +57,11 @@ function getProjects(req, res) {
       id: 6,
       title: "WeekTask",
       description:
-        "WeekTask é uma aplicação fullstack de gerenciamento semanal de tarefas. Organize suas metas, acompanhe o progresso e mantenha o histórico de todas as semanas — com notificações automáticas para te manter no ritmo.",
+        "WeekTask é uma aplicação fullstack de gerenciamento semanal de tarefas. Organize suas metas, acompanhe o progresso e mantenha o histórico de todas as semanas — com notificações automáticas para te manter no ritmo. ",
       techs: ["TypeScript", "React", "React Router", "Node.js", "PostgreSQL"],
       github: "https://github.com/felipedevpips-max/weekly-checklist-app",
       deploy: "https://weekly-checklist-app.vercel.app/",
-      image: "pomodoro.png",
+      image: "todolist.png",
     },
   ]);
 }
