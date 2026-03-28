@@ -1,0 +1,27 @@
+# ===== Node =====
+node_modules/
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ===== Environment =====
+.env
+.env.local
+.env.*.local
+
+# ===== Build / Cache =====
+dist/
+build/
+.cache/
+.tmp/
+
+# ===== Logs =====
+logs/
+*.log
+
+# ===== OS =====
+.DS_Store
+Thumbs.db
+
+# ===== Docker =====
+.dockerignore
