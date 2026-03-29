@@ -59,7 +59,7 @@ function getProjects(req, res) {
       techs: ["TypeScript", "React", "React Router", "Node.js", "PostgreSQL"],
       github: "https://github.com/felipedevpips-max/weekly-checklist-app",
       deploy: "https://weekly-checklist-app.vercel.app/",
-      image: "todolist.png",
+      image: "weektask.png",
     },
   ]);
 }
